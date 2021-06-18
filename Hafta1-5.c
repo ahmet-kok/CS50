@@ -9,7 +9,7 @@ int main(void)
         creditnumber = get_long("give me a number:\n");
     }
     while (creditnumber <= 0);
-    int counter = 0, carp, carp2 = 0, asildege = 0, deger2, deger, diger, cift, ciftv;
+    int counter = 0, carp, carp2 = 0, asildeger = 0, deger2, deger, diger, cift, ciftv;
     copy = creditnumber;
     copy2 = creditnumber;
     while (copy > 0)
@@ -28,7 +28,7 @@ int main(void)
         diger = copy2 % 10;
         deger = deger / 10;
         deger2 = deger * 2;
-        deger2 = (deger 2 / 10) + (deger2 % 10);
+        deger2 = (deger2 / 10) + (deger2 % 10);
         asildeger += deger2 + diger;
         copy2 /= 100;
     }
@@ -38,11 +38,11 @@ int main(void)
         {
             printf("AMEX\n");
         }
-        if (ciftv == 4 && (counter == 13 || counter == 16))
+        else if (ciftv == 4 && (counter == 13 || counter == 16))
         {
             printf("VISA\n");
         }
-        if ((cift == 51 || cift == 52 || cift == 53 || cift == 54 || cift == 55) && (counter == 16))
+        else if ((cift == 51 || cift == 52 || cift == 53 || cift == 54 || cift == 55) && (counter == 16))
         {
             printf("MASTERCARD\n");
         }
